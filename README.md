@@ -1,42 +1,44 @@
-# Rede Neural Básica
+# Neural Network from Scratch
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
-![Numpy](https://img.shields.io/badge/Numpy-Operações_Matriciais-brightgreen?logo=NUmpy&logoColor=white)
-![Git](https://img.shields.io/badge/Git-Versionamento-orange?logo=git&logoColor=white)
+![Numpy](https://img.shields.io/badge/Numpy-Matrix_Operations-brightgreen?logo=numpy&logoColor=white)
+![Git](https://img.shields.io/badge/Git-Version_Control-orange?logo=git&logoColor=white)
 
-
-Este projeto tem como objetivo a criação de um **modelo de rede neural** personalizável em Python. Implementado para fins de estudo, tanto da implementação prática quanto do impacto de diferentes HiperParâmetros.
-
----
-
-## 📁 Estrutura do projeto
-
-O projeto é dividido em três arquivos principais:
-
-- **Rede.py** - Implementa a class Rede_Neural, que possui os métodos de FeedFoward, Backprop e Learn;
-
-- **Gera_Dados.py** - Implementa um gerador de dataset para treinamento da Rede Neural, armazenando no formato **Entrada | Saída** no arquivo **Dados.txt**;
-
-- **RN.py** - Permite ao usúario escolher os HiperParâmetros de sua escolha pra Rede Neural, como **Quantidade de Camadas**, **Neurônios para cada camada**, **Taxa de Aprendizado** e **Rounds de treino por época**.
+A customizable **neural network model** built from scratch in Python, developed for studying both the practical implementation of neural networks and the impact of different hyperparameters on model performance.
 
 ---
 
-## 🛠️ Ferramentas Utilizadas
-- **[Python](https://www.python.org/)** - Linguagem de programação principal do projeto.  
-- **[Numpy](https://numpy.org/doc/)** - Biblioteca para cálculos matriciais eficientes.  
-- **[Git](https://git-scm.com/)** - Versionamento e controle do código.  
+## 📁 Project Structure
+
+The project is divided into three main files:
+
+- **Rede.py** — Implements the `NeuralNetwork` class, which contains the FeedForward, Backpropagation, and Learn methods.
+
+- **Gera_Dados.py** — Implements a dataset generator for training the neural network, storing samples in the format **Input | Output** in the file **Dados.txt**.
+
+- **RN.py** — Allows the user to choose hyperparameters such as **number of layers**, **neurons per layer**, **learning rate**, and **training rounds per epoch**.
+
 ---
 
-## Como testar
-Com python instalado:
+## 🛠️ Tools & Libraries
+- **[Python](https://www.python.org/)** — Main programming language.
+- **[Numpy](https://numpy.org/doc/)** — Library for efficient matrix computations.
+- **[Git](https://git-scm.com/)** — Version control.
+
+---
+
+## 🚀 How to Run
+
+With Python installed:
+
 ```bash
-    git clone https://github.com/Ivan-V246/Rede-Neural-Base.git
-    cd Rede-Neural-Base/
-    pip install -r requirements
-    cd src/
-    python Gera_Dados.py
-    python RN.py
+git clone https://github.com/Ivan-V246/Rede-Neural-Base.git
+cd Rede-Neural-Base/
+pip install -r requirements.txt
+cd src/
+python Gera_Dados.py
+python RN.py
 ```
 
-O programa RN.py irá instanciar a classe Rede_Neural, com os parâmetros definidos pelo usuário, e apresentar as **saídas esperadas** e a **saídas do modelo** para cada input do conjunto de treino, assim como também a margem de erro total daquela versão do modelo.
+`RN.py` will instantiate the `NeuralNetwork` class with user-defined parameters and display the **expected outputs** alongside the **model outputs** for each input in the training set, as well as the total error margin for that version of the model.
 
- **OBS: Por padrão a rede e o gerador de dados estão configurados para treinar o aprendizado da expressão lógica **((A and B) or C)**, então a Primeira Camada deve possuir 3 Neurônios e a Última deve possuir 1 para funcionamento correto, mas isso é facilmente ajustável para treinamento com outros objetivos e estruturas.**
+> **Note:** By default, the network and data generator are configured to learn the logical expression **((A and B) or C)**. Therefore, the first layer must have **3 neurons** and the last layer must have **1 neuron** for correct operation. This is easily adjustable for training with other objectives and architectures.
